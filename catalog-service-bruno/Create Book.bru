@@ -1,0 +1,20 @@
+meta {
+  name: Create Book
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:9001/books
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "isbn": "1234567890",
+    "author": "Kate",
+    "title": "Baoz",
+    "price": 15
+  }
+}
