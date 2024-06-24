@@ -20,7 +20,7 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v4
         with:
-          distribution: amazoncorretto
+          distribution: corretto
           java-version: 17
           cache: gradle
 
@@ -59,7 +59,7 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v4
         with:
-          distribution: amazoncorretto
+          distribution: corretto
           java-version: 17
           cache: gradle
 
