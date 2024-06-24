@@ -62,7 +62,8 @@ jobs:
           java-version: 17
           cache: gradle
 
-      - name: Build, unit tests and integration tests
+      # Skip test
+      - name: Build
         run: |
           chmod +x gradlew
           ./gradlew build -x test
@@ -99,4 +100,4 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Publish container image
-        run: docker push ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.VERSION }}
+        run: docker push "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}"
